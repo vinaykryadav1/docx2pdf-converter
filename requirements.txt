@@ -6,4 +6,4 @@ seaborn==0.13.1
 altair==5.2.0
 plotly==5.18.0
 docx2pdf==0.1.8
-pyhtoncom==3.11.03
+pywin32==306
