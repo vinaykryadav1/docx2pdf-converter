@@ -1,11 +1,11 @@
 import streamlit as st
-#import pythoncom
+import pythoncom
 import time
 from docx2pdf import convert
 import os
 
 # Initialize COM
-#pythoncom.CoInitialize()
+pythoncom.CoInitialize()
 st.set_page_config(page_title='Docx to PDF', page_icon='📄')
 st.title('Multiple Word to PDF Converter 📄')
 
