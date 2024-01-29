@@ -7,3 +7,4 @@ altair==5.2.0
 plotly==5.18.0
 docx2pdf==0.1.8
 pywin32==306
+python==23.3.2
