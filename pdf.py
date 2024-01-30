@@ -1,6 +1,5 @@
 import streamlit as st
 #import pythoncom
-import docx
 import time
 from docx2pdf import convert
 import os
