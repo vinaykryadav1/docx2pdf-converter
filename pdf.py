@@ -3,7 +3,7 @@ import streamlit as st
 import time
 from docx2pdf import convert
 import os
-import traceback  #1
+    
 # Initialize COM
 #pythoncom.CoInitialize()
 st.set_page_config(page_title='Docx to PDF', page_icon='📄')
@@ -38,15 +38,10 @@ if docx_files:
 
         except Exception as e:
             st.error(f"An error occurred during conversion for {os.path.basename(uploaded_file_path)}: {e}")
-            st.error(traceback.format_exc()) #2
-
 
         finally:
-    # Remove the uploaded Word file after conversion
-            try:
-                os.remove(uploaded_file_path)
-            except OSError as e:                            #3
-                st.warning(f"Error removing file: {e}")     #4
+            # Remove the uploaded Word file after conversion
+            os.remove(uploaded_file_path)
 
 else:
     # Display a warning if no file is uploaded
@@ -56,5 +51,3 @@ audiofile = open('audio.mp3','rb')
 st.audio(audiofile.read())
 videourl = open('Video.mp4','rb')
 st.video(videourl)
-
-
